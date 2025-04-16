@@ -5,7 +5,7 @@ import json
 
 app = FastAPI()
 
-genai.configure(api_key="AIzaSyDQ0IX_pTYKpVbikKmHaMi1BLN6g1e3pYY")
+genai.configure(api_key="")
 
 # Create the model
 generation_config = {
