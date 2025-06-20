@@ -34,33 +34,6 @@ function AddNewInterview() {
   const { isSignedIn, user } = useUser();
   const [extractingResume, setExtractingResume] = useState(false);
 
-  // const handleSubmit = async (e) => {
-  //   try {
-  //     const formData = {
-  //       jobPosition: jobPosition,
-  //       jobDesc: jobDesc,
-  //       jobExperience: jobExperience,
-  //     };
-  //     console.log("Form Data", formData);
-  //     // Send the form data to FastAPI
-  //     const response = await fetch(
-  //       "http://localhost:8000/questions/jobdescription",
-  //       {
-  //         method: "POST",
-  //         headers: {
-  //           "Content-Type": "application/json",
-  //         },
-  //         body: formData,
-  //       }
-  //     );
-
-  //     const data = await response.json();
-  //     console.log("Job description", data);
-  //   } catch (error) {
-  //     console.error("Error sending data to FastAPI:", error);
-  //   }
-  // };
-
   const handleFileUpload = async (event) => {
     setExtractingResume(true);
     setLoading(true);
@@ -98,11 +71,6 @@ function AddNewInterview() {
   const onSubmit = async (e) => {
     e.preventDefault();
     setLoading(true);
-
-    //await handleSubmit(e);
-
-    // Log the extractedResumeData to check its structure
-    // console.log("Extracted Resume Data:", extractedResumeData);
 
     const resumeDataText = extractedResumeData
       ? `Candidate Details:
