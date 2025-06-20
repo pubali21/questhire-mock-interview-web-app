@@ -19,7 +19,12 @@ const Footer = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     emailjs
-      .send("service_qovrd1e", "template_nosds8f", formData, "IWfsfRUER0fuh_d2x")
+      .send(
+        "service_qovrd1e",
+        "template_nosds8f",
+        formData,
+        "IWfsfRUER0fuh_d2x"
+      )
       .then(
         () => {
           alert("Message sent successfully!");
@@ -37,32 +42,26 @@ const Footer = () => {
       <div className="container mx-auto px-8 grid grid-cols-1 md:grid-cols-2 items-start gap-8">
         {/* Left Section */}
         <div className="space-y-6 text-left">
-          <h2 className="text-2xl font-bold text-blue-800">We Value Your Feedback!</h2>
+          <h2 className="text-2xl font-bold text-blue-800">
+            We Value Your Feedback!
+          </h2>
           <p className="text-blue-600 leading-relaxed">
-          Your insights help us improve your interview experience. Share your
-          thoughts and suggestions to help us serve you better!
+            Your insights help us improve your interview experience. Share your
+            thoughts and suggestions to help us serve you better!
           </p>
 
           {/* Contact Info Section */}
           <div className="space-y-4 text-blue-800">
             <div className="flex items-center gap-3">
-              <img
-                src="/address.png"
-                alt="Address Icon"
-                className="w-6 h-6"
-              />
+              <img src="/address.png" alt="Address Icon" className="w-6 h-6" />
               <div>
                 <h3 className="font-bold text-blue-800">ADDRESS</h3>
-                <p>Fiem ,India</p>
+                <p>FIEM,KOLKATA</p>
               </div>
             </div>
 
             <div className="flex items-center gap-3">
-              <img
-                src="/phone.png"
-                alt="Phone Icon"
-                className="w-6 h-6"
-              />
+              <img src="/phone.png" alt="Phone Icon" className="w-6 h-6" />
               <div>
                 <h3 className="font-bold text-blue-800">PHONE NUMBER</h3>
                 <p>+91 7908806552</p>
@@ -70,14 +69,10 @@ const Footer = () => {
             </div>
 
             <div className="flex items-center gap-3">
-              <img
-                src="/email.png"
-                alt="Email Icon"
-                className="w-7 h-6"
-              />
+              <img src="/email.png" alt="Email Icon" className="w-7 h-6" />
               <div>
                 <h3 className="font-bold text-blue-800">EMAIL</h3>
-                <p>prasunmridha6@gmail.com</p>
+                <p>questhire2025@gmail.com</p>
               </div>
             </div>
 

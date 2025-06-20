@@ -18,13 +18,14 @@ const page = () => {
             <div className="w-full max-w-md p-6 shadow-lg bg-white rounded-xl">
               <img
                 alt="Profile 1"
-                src="/pic.jpeg"
+                src="/Pubali.jpg"
                 className="h-52 w-52 rounded-full object-cover mx-auto"
               />
               <div className="text-center mt-4">
                 <h3 className="text-xl font-medium text-blue-600">About Me</h3>
                 <p className="mt-2 text-lg text-blue-700 font-semibold">
-                  I am Utsav Patel, the developer behind CarConnect, a marketplace platform for car buyers and sellers.
+                  A passionate Software developer with a focus on building
+                  scalable web applications working on full stack development.
                 </p>
                 <div className="mt-5 flex gap-3 justify-center">
                   <a
@@ -32,21 +33,30 @@ const page = () => {
                     href=""
                     className="cursor-pointer hover:bg-pink-500 hover:text-white p-2 rounded-lg"
                   >
-                    <FaInstagram className="text-blue-600" style={{ fontSize: "30px" }} />
+                    <FaInstagram
+                      className="text-blue-600"
+                      style={{ fontSize: "30px" }}
+                    />
                   </a>
                   <a
                     target="_blank"
                     href=""
                     className="cursor-pointer hover:bg-slate-900 hover:text-white p-2 rounded-lg"
                   >
-                    <FiGithub className="text-blue-600" style={{ fontSize: "30px" }} />
+                    <FiGithub
+                      className="text-blue-600"
+                      style={{ fontSize: "30px" }}
+                    />
                   </a>
                   <a
                     target="_blank"
                     href=""
                     className="cursor-pointer hover:bg-blue-600 hover:text-white p-2 rounded-lg"
                   >
-                    <FaLinkedinIn className="text-blue-600" style={{ fontSize: "30px" }} />
+                    <FaLinkedinIn
+                      className="text-blue-600"
+                      style={{ fontSize: "30px" }}
+                    />
                   </a>
                 </div>
               </div>
@@ -58,13 +68,14 @@ const page = () => {
             <div className="w-full max-w-md p-6 shadow-lg bg-white rounded-xl">
               <img
                 alt="Profile 2"
-                src="/mypic2.jpeg"
+                src="/Santanu.png"
                 className="h-52 w-52 rounded-full object-cover mx-auto"
               />
               <div className="text-center mt-4">
                 <h3 className="text-xl font-medium text-blue-600">About Me</h3>
                 <p className="mt-2 text-lg text-blue-700 font-semibold">
-                  I am a passionate developer with experience in building real-time applications and modern UI.
+                  I am a passionate developer with experience in building
+                  real-time applications and modern UI.
                 </p>
                 <div className="mt-5 flex gap-3 justify-center">
                   <a
@@ -72,21 +83,30 @@ const page = () => {
                     href=""
                     className="cursor-pointer hover:bg-pink-500 hover:text-white p-2 rounded-lg"
                   >
-                    <FaInstagram className="text-blue-600" style={{ fontSize: "30px" }} />
+                    <FaInstagram
+                      className="text-blue-600"
+                      style={{ fontSize: "30px" }}
+                    />
                   </a>
                   <a
                     target="_blank"
                     href=""
                     className="cursor-pointer hover:bg-slate-900 hover:text-white p-2 rounded-lg"
                   >
-                    <FiGithub className="text-blue-600" style={{ fontSize: "30px" }} />
+                    <FiGithub
+                      className="text-blue-600"
+                      style={{ fontSize: "30px" }}
+                    />
                   </a>
                   <a
                     target="_blank"
                     href=""
                     className="cursor-pointer hover:bg-blue-600 hover:text-white p-2 rounded-lg"
                   >
-                    <FaLinkedinIn className="text-blue-600" style={{ fontSize: "30px" }} />
+                    <FaLinkedinIn
+                      className="text-blue-600"
+                      style={{ fontSize: "30px" }}
+                    />
                   </a>
                 </div>
               </div>
@@ -98,13 +118,14 @@ const page = () => {
             <div className="w-full max-w-md p-6 shadow-lg bg-white rounded-xl">
               <img
                 alt="Profile 3"
-                src="/mypic3.jpeg"
+                src="/Tunir.jpg"
                 className="h-52 w-52 rounded-full object-cover mx-auto"
               />
               <div className="text-center mt-4">
                 <h3 className="text-xl font-medium text-blue-600">About Me</h3>
                 <p className="mt-2 text-lg text-blue-700 font-semibold">
-                  I am a React and Node.js developer with a focus on building scalable web applications.
+                  I am a React and Node.js developer with a focus on building
+                  scalable web applications.
                 </p>
                 <div className="mt-5 flex gap-3 justify-center">
                   <a
@@ -112,21 +133,30 @@ const page = () => {
                     href=""
                     className="cursor-pointer hover:bg-pink-500 hover:text-white p-2 rounded-lg"
                   >
-                    <FaInstagram className="text-blue-600" style={{ fontSize: "30px" }} />
+                    <FaInstagram
+                      className="text-blue-600"
+                      style={{ fontSize: "30px" }}
+                    />
                   </a>
                   <a
                     target="_blank"
                     href=""
                     className="cursor-pointer hover:bg-slate-900 hover:text-white p-2 rounded-lg"
                   >
-                    <FiGithub className="text-blue-600" style={{ fontSize: "30px" }} />
+                    <FiGithub
+                      className="text-blue-600"
+                      style={{ fontSize: "30px" }}
+                    />
                   </a>
                   <a
                     target="_blank"
                     href=""
                     className="cursor-pointer hover:bg-blue-600 hover:text-white p-2 rounded-lg"
                   >
-                    <FaLinkedinIn className="text-blue-600" style={{ fontSize: "30px" }} />
+                    <FaLinkedinIn
+                      className="text-blue-600"
+                      style={{ fontSize: "30px" }}
+                    />
                   </a>
                 </div>
               </div>
@@ -138,13 +168,14 @@ const page = () => {
             <div className="w-full max-w-md p-6 shadow-lg bg-white rounded-xl">
               <img
                 alt="Profile 4"
-                src="/me.jpeg"
+                src="/Prasun.jpeg"
                 className="h-52 w-52 rounded-full object-cover mx-auto"
               />
               <div className="text-center mt-4">
                 <h3 className="text-xl font-medium text-blue-600">About Me</h3>
                 <p className="mt-2 text-lg text-blue-700 font-semibold">
-                   Full-Stack and ML model Developer, specializing in frontend and building ML-MODELs.
+                  Full-Stack and ML model Developer, specializing in frontend
+                  and building ML-MODELs.
                 </p>
                 <div className="mt-5 flex gap-3 justify-center">
                   <a
@@ -152,21 +183,30 @@ const page = () => {
                     href=""
                     className="cursor-pointer hover:bg-pink-500 hover:text-white p-2 rounded-lg"
                   >
-                    <FaInstagram className="text-blue-600" style={{ fontSize: "30px" }} />
+                    <FaInstagram
+                      className="text-blue-600"
+                      style={{ fontSize: "30px" }}
+                    />
                   </a>
                   <a
                     target="_blank"
                     href=""
                     className="cursor-pointer hover:bg-slate-900 hover:text-white p-2 rounded-lg"
                   >
-                    <FiGithub className="text-blue-600" style={{ fontSize: "30px" }} />
+                    <FiGithub
+                      className="text-blue-600"
+                      style={{ fontSize: "30px" }}
+                    />
                   </a>
                   <a
                     target="_blank"
                     href=""
                     className="cursor-pointer hover:bg-blue-600 hover:text-white p-2 rounded-lg"
                   >
-                    <FaLinkedinIn className="text-blue-600" style={{ fontSize: "30px" }} />
+                    <FaLinkedinIn
+                      className="text-blue-600"
+                      style={{ fontSize: "30px" }}
+                    />
                   </a>
                 </div>
               </div>

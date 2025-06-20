@@ -1,5 +1,5 @@
 "use client";
-import { Button } from "@/components/ui/button";
+import dynamic from "next/dynamic";
 import { FaUser } from "react-icons/fa";
 import { SignInButton, UserButton, useUser } from "@clerk/nextjs";
 import Image from "next/image";
@@ -108,4 +108,5 @@ function Header() {
   );
 }
 
-export default Header;
+export default dynamic(() => Promise.resolve(Header), { ssr: false });
+// export default Header;

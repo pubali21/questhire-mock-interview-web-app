@@ -32,35 +32,38 @@ function AddNewInterview() {
   const [JsonResponse, setJsonResponse] = useState([]);
   const router = useRouter();
   const { isSignedIn, user } = useUser();
+  const [extractingResume, setExtractingResume] = useState(false);
 
-  const handleSubmit = async (e) => {
-    try {
-      const formData = {
-        jobPosition: jobPosition,
-        jobDesc: jobDesc,
-        jobExperience: jobExperience,
-      };
-      print("Form Data", formData);
-      // Send the form data to FastAPI
-      const response = await fetch(
-        "http://localhost:8000/questions/jobdescription",
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: formData,
-        }
-      );
+  // const handleSubmit = async (e) => {
+  //   try {
+  //     const formData = {
+  //       jobPosition: jobPosition,
+  //       jobDesc: jobDesc,
+  //       jobExperience: jobExperience,
+  //     };
+  //     console.log("Form Data", formData);
+  //     // Send the form data to FastAPI
+  //     const response = await fetch(
+  //       "http://localhost:8000/questions/jobdescription",
+  //       {
+  //         method: "POST",
+  //         headers: {
+  //           "Content-Type": "application/json",
+  //         },
+  //         body: formData,
+  //       }
+  //     );
 
-      const data = await response.json();
-      console.log("Job description", data);
-    } catch (error) {
-      console.error("Error sending data to FastAPI:", error);
-    }
-  };
+  //     const data = await response.json();
+  //     console.log("Job description", data);
+  //   } catch (error) {
+  //     console.error("Error sending data to FastAPI:", error);
+  //   }
+  // };
 
   const handleFileUpload = async (event) => {
+    setExtractingResume(true);
+    setLoading(true);
     const file = event.target.files[0];
 
     if (file && file.type === "application/pdf") {
@@ -79,6 +82,8 @@ function AddNewInterview() {
           const result = await response.json();
           setExtractedResumeData(result);
           console.log("Extracted Resume Data:", result);
+          setLoading(false);
+          setExtractingResume(false);
         } else {
           console.error("Failed to extract resume details");
         }
@@ -94,10 +99,10 @@ function AddNewInterview() {
     e.preventDefault();
     setLoading(true);
 
-    await handleSubmit(e);
+    //await handleSubmit(e);
 
     // Log the extractedResumeData to check its structure
-    console.log("Extracted Resume Data:", extractedResumeData);
+    // console.log("Extracted Resume Data:", extractedResumeData);
 
     const resumeDataText = extractedResumeData
       ? `Candidate Details:
@@ -110,18 +115,18 @@ function AddNewInterview() {
       : "";
     console.log("Resume Data Text:", resumeDataText);
     const InputPrompt = `Job Position: ${jobPosition}, Job Description: ${jobDesc}, Years of Experience: ${jobExperience}. 
-    ${resumeDataText}
-    Based on the given information, generate ${
+${resumeDataText}
+Based on the given information, generate ${
       process.env.NEXT_PUBLIC_INTERVIEW_QUESTION_COUNT
     } interview questions from applied Job Position: ${jobPosition} and Job Description: ${jobDesc}  with answers and 5 questions based on Resume details like candidate's skills: ${JSON.stringify(
-      extractedResumeData.skills
+      extractedResumeData?.skills
     )}, 
-    his degree: ${JSON.stringify(extractedResumeData.education)}, 
-    Projects if any: ${JSON.stringify(extractedResumeData.projects)}, 
-    and work experience if any: ${JSON.stringify(
-      extractedResumeData.work_experience
+his degree: ${JSON.stringify(extractedResumeData?.education)}, 
+Projects if any: ${JSON.stringify(extractedResumeData?.projects)}, 
+and work experience if any: ${JSON.stringify(
+      extractedResumeData?.work_experience
     )} 
-    with answers in a single array JSON format.`;
+with answers in a single array JSON format.`;
 
     try {
       const result = await chatSession.sendMessage(InputPrompt);
@@ -276,7 +281,9 @@ function AddNewInterview() {
                     {loading ? (
                       <>
                         <LoaderCircle className="animate-spin" />
-                        'Generating from AI'
+                        {extractingResume
+                          ? "Extracting Resume Details"
+                          : "Generating from AI"}
                       </>
                     ) : (
                       "Start Interview"

@@ -5,7 +5,7 @@ import json
 
 app = FastAPI()
 
-genai.configure(api_key="")
+genai.configure(api_key="AIzaSyCeRAsl9xvPA5dN3-9V-kroneN2CnF52Ak") #api key not to be committed
 
 # Create the model
 generation_config = {

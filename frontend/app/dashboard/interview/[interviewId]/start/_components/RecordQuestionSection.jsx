@@ -36,9 +36,7 @@ function RecordQuestionSection({
   });
 
   useEffect(() => {
-    results.map((result) => {
-      setUserAnswer((prevAnswer) => prevAnswer + result?.transcript);
-    });
+    setUserAnswer(results.map((r) => r.transcript).join(" "));
   }, [results]);
 
   useEffect(() => {
@@ -67,8 +65,7 @@ function RecordQuestionSection({
       userAnswer +
       " ,Depends on question and user answer for give interview question" +
       " please give us rating for answer and feedback as area of improvement" +
-      "in just 3 to 5 lines to improve it in JSON format with rating field and feedback field " +
-      "and provide the next question by picking out any relevant topic from the user answer as next_question field";
+      "in just 3 to 5 lines to improve it in JSON format with rating field and feedback field ";
 
     const result = await chatSession.sendMessage(feedbackPrompt);
     const mockJsonResp = result.response

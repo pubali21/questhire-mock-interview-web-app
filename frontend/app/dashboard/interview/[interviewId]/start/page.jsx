@@ -40,6 +40,12 @@ function StartInterview({ params }) {
     }
   };
 
+  const handlePreviousQuestionClick = () => {
+    if (activeQuestionIndex > 0) {
+      setActiveQuestionIndex(activeQuestionIndex - 1);
+      setIsAnswered(false); // Optionally reset isAnswered
+    }
+  };
   const handleNextQuestionClick = () => {
     //if (!isAnswered) {
     //  toast("Kindly Answer to go to the Next Question!");
@@ -71,11 +77,20 @@ function StartInterview({ params }) {
         )}
       </div>
       <div className="flex justify-end gap-6">
+        {mockInterviewQuestion && activeQuestionIndex > 0 && (
+          <Button
+            className="gap-1 bg-gray-500 hover:bg-gray-600 text-white"
+            onClick={handlePreviousQuestionClick}
+          >
+            <IoIosArrowBack className="w-5 h-5" />
+            Previous Question
+          </Button>
+        )}
         {mockInterviewQuestion &&
           activeQuestionIndex < mockInterviewQuestion.length - 1 && (
             <Button
               className="gap-1 bg-blue-600 hover:bg-blue-700 text-white"
-              onClick={handleNextQuestionClick} // Use the handleNextQuestionClick function
+              onClick={handleNextQuestionClick}
             >
               Next Question
               <MdNavigateNext className="w-5 h-5" />
